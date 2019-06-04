@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.itdr.dao.UserMapper">
+     <select id="selectByUname"  resultType="User">
+          select username from neuedu_user where username=#{username}
+     </select>
+     <select id="selectByUnameforquestion"  resultType="User">
+          select question from neuedu_user where username=#{username}
+     </select>
+     <select id="selectByUnameforanswer" resultType="User">
+         select * from neuedu_user where  username=#{username} and question=#{question}
+     </select>
+</mapper>
